@@ -84,7 +84,7 @@ void loop() {
 
     }
   }
-    if (lpgConcentration > 10 || coConcentration > 50 || smokeConcentration > 50) {
+    while (lpgConcentration > 10 || coConcentration > 50 || smokeConcentration > 50) {
     // If any gas concentration exceeds 200 ppm, send an SMS
     SendSMS(phoneNumbers, sizeof(phoneNumbers) / sizeof(phoneNumbers[0])); // Send SMS to multiple numbers
     digitalWrite(buzzer, HIGH);
